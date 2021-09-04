@@ -1,3 +1,5 @@
+import numpy as np
+
 def degrau(x, derivada = False):
   if not derivada:
     return np.where(x > 0, 1, 0)
