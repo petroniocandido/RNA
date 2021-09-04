@@ -91,7 +91,7 @@ def classificacao(x, W1, B1, W2, B2, **kwargs):
     
     saidas1 = np.zeros(num_neuron)
     for neuronio in range(num_in):
-      saidas1[neuronio] = ativacao_camada1(W1[neuronio].dot(X[i,:]) + B1[neuronio])
+      saidas1[neuronio] = ativacao_camada1(W1[neuronio].dot(x[i,:]) + B1[neuronio])
 
     saidas2 = np.zeros(num_out)
     for neuronio in range(num_out):
@@ -113,7 +113,7 @@ def regressao(x, W1, B1, W2, B2, **kwargs):
     
     saidas1 = np.zeros(num_neuron)
     for neuronio in range(num_in):
-      saidas1[neuronio] = ativacao_camada1(W1[neuronio].dot(X[i,:]) + B1[neuronio])
+      saidas1[neuronio] = ativacao_camada1(W1[neuronio].dot(x[i,:]) + B1[neuronio])
 
     saidas2 = np.zeros(num_out)
     for neuronio in range(num_out):
