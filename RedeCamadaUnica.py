@@ -1,6 +1,6 @@
 import numpy as np
-from FuncoesAtivacao import sigmoide, identidade
-from FuncoesCusto import mse
+from RNA.FuncoesAtivacao import sigmoide, identidade
+from RNA.FuncoesCusto import mse
 
 def treinar(X, Y, **kwargs):
   taxa_aprendizado = kwargs.get("taxa_aprendizado", 0.02)
