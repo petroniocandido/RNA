@@ -1,7 +1,10 @@
 import numpy as np
 
 def identidade(x, derivada = False):
-  return x
+  if not derivada:
+    return x
+  else:
+    return 1
 
 def degrau(x, derivada = False):
   if not derivada:
