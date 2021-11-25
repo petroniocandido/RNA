@@ -62,7 +62,9 @@ def treinar(X, Y, **kwargs):
 
       erros = []
       delta2 = np.zeros(num_out)
-      for neuronio in range(num_out):
+      ind_randomizado = [k for k in range(num_out)]
+      np.random.shuffle(ind_randomizado)
+      for neuronio in ind_randomizado:
         erros.append(funcao_custo(Y[i,neuronio], saidas2[neuronio]))
         delta2[neuronio] = funcao_custo(Y[i,neuronio], saidas2[neuronio], derivada=True) * ativacao_camada2(net2[neuronio], derivada=True)
         W2[neuronio] += taxa_aprendizado*-delta2[neuronio]*-saidas1
